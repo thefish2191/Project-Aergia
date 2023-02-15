@@ -1,0 +1,36 @@
+{
+    "name": "lang-support",
+    "displayName": "langSupport",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "csharp",
+                "aliases": [
+                    "C sharp",
+                    "csharp"
+                ],
+                "extensions": [
+                    ".cs",
+                    ".csproj",
+                    ".xml"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "csharp",
+                "scopeName": "",
+                "path": "./syntaxes/csharp.tmLanguage.json"
+            }
+        ]
+    }
+}

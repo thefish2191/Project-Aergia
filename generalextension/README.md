@@ -1,6 +1,6 @@
-# testing README
+# generalextension README
 
-This is the README for your extension "testing". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "generalextension". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

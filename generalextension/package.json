@@ -1,7 +1,7 @@
 {
-  "name": "testing",
-  "displayName": "testing",
-  "description": "does texting",
+  "name": "generalextension",
+  "displayName": "generalExtension",
+  "description": "",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.75.0"
@@ -10,41 +10,16 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:csharp"
+    "onCommand:generalextension.helloWorld"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "submenus": [
-      {
-        "id": "DotNet7.New",
-        "label": "New Dotnet"
-      }
-    ],
     "commands": [
       {
-        "command": "testing.helloWorld",
+        "command": "generalextension.helloWorld",
         "title": "Hello World"
-      },
-      {
-        "command": "testing.showTime",
-        "title": "Show me the time"
       }
-    ],
-    "menus": {
-      "DotNet7.New": [
-        {
-          "group": "00_Basics@0",
-          "command": "testing.showTime"
-        }
-      ],
-      "explorer/context": [
-        {
-          "submenu": "DotNet7.New",
-          "group": "navigation@-1",
-          "when": "explorerResourceIsFolder"
-        }
-      ]
-    }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -55,16 +30,16 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
+    "@types/vscode": "^1.75.0",
     "@types/glob": "^8.0.1",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",
-    "@types/vscode": "^1.75.0",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
-    "@vscode/test-electron": "^2.2.2",
     "eslint": "^8.33.0",
     "glob": "^8.1.0",
     "mocha": "^10.1.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.4",
+    "@vscode/test-electron": "^2.2.2"
   }
 }
