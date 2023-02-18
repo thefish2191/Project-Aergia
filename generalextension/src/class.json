@@ -1,0 +1,9 @@
+{
+    "Print to console": {
+        "body": [
+            "${namespace};",
+            "public class ${className}",
+            "WriteLine(\"Hello\")"
+        ]
+    }
+}
