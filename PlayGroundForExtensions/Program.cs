@@ -1,33 +1,28 @@
 ﻿using static System.Console;
-using Spectre.Console;
-WriteLine();
 
-// AnsiConsole.Markup("[underline red]Hello[/] World!");
-// WriteLine();
-// AnsiConsole.Write(new Columns(
-//             new Text("Item 1"),
-//             new Text("Item 2")
-//         ));
-// var columns = new List<Text>(){
-//     new Text("Item 1", new Style(Color.Red, Color.Black)),
-//     new Text("Item 2", new Style(Color.Green, Color.Black)),
-//     new Text("Item 3", new Style(Color.Blue, Color.Black))
-// };
 
-// // Renders each item with own style
-// AnsiConsole.Write(new Columns(columns));
 
-var panel = new Panel("Hello World");
-// Sets the padding
-panel.Padding = new Padding(2, 2, 2, 2);
-panel.Header = new PanelHeader("Some text");
-panel.Border = BoxBorder.Ascii;
-panel.Border = BoxBorder.Square;
-panel.Border = BoxBorder.Rounded;
-panel.Border = BoxBorder.Heavy;
-panel.Border = BoxBorder.Double;
-panel.Border = BoxBorder.None;
+WriteLine("Before parsing");
+Write("What is your age? ");
+string? input = ReadLine(); // or use "49" in a notebook
+WriteLine(int.MaxValue);
 
-panel.Expand = true;
+try
+{
+    int age = int.Parse(input!);
+    WriteLine($"You are {age} years old.");
+}
+catch (OverflowException)
+{
+    WriteLine("Your age is a valid number format but it is either too big or small.");
+}
+catch (FormatException)
+{
+    WriteLine("The age you entered is not a valid number format.");
+}
+catch (Exception ex)
+{
+    WriteLine($"{ex.GetType()} says {ex.Message}");
+}
 
-WriteLine();
+WriteLine("After parsing");
