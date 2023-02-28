@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="System.Console" Static="true" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Project-Athena\Animals\Animals.csproj" />
+    <ProjectReference Include="..\..\Project-Athena\Math\Math.csproj" />
+    <ProjectReference Include="..\..\Project-Athena\BusinessMgmt\BusinessMgmt.csproj" />
+    <ProjectReference Include="..\..\Project-Athena\Tasks\Tasks.csproj" />
+    <ProjectReference Include="..\..\Project-Athena\People\People.csproj" />
+    <ProjectReference Include="..\..\Project-Athena\Vehicles\Vehicles.csproj" />
+    <ProjectReference Include="..\..\Project-Athena\Utils\Utils.csproj" />
+  </ItemGroup>
+
+</Project>
