@@ -21,9 +21,7 @@
 *.pyd    binary
 
 # Jupyter notebook
-*.ipynb  text eol=lf
-*.ipynb  text 
-*.ipynb  text diff=text
+*.ipynb linguist-documentation
 
 
 # Note: .db, .p, and .pkl files are associated
