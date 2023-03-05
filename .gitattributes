@@ -23,6 +23,7 @@
 # Jupyter notebook
 *.ipynb  text eol=lf
 *.ipynb  text 
+*.ipynb  text diff=text
 
 
 # Note: .db, .p, and .pkl files are associated
